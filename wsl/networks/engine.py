@@ -12,8 +12,8 @@ def engine(loader: Any, checkpoint: Dict[str, Any],
            batchsize: int, classes: int, reg_args: Any, is_train: bool):
 
     overall_loss = []
-    all_preds = torch.zeros((0, classes))
-    all_labels = torch.zeros((0, classes))
+    all_preds = torch.zeros((0, classes)).cuda()
+    all_labels = torch.zeros((0, classes)).cuda()
     start = time.time()
     sigmoid = torch.nn.Sigmoid()
 
