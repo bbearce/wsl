@@ -60,4 +60,7 @@ def engine(loader: Any, checkpoint: Dict[str, Any],
                    f'Accuracy at {(error_range * 2)}:{round(100 * a2, 1)}')
 
     print(summary)
+    with open('/mnt/out/summary.txt', 'w') as f:
+        f.write('Loss:{}\nROC:{}\nSensitivity:{}\nSpecificity:{}'.format(round(loss, 3),round(rmetric * 100, 1),round(100 * sens,1),round(100 * spec, 1)))
+
     return loss, rmetric, summary
