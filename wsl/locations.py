@@ -2,7 +2,7 @@
 from pathlib import Path
 
 # Standard location for share mounting
-mount = Path('/data/2015P002510')
+mount = Path('/mnt/in')
 
 # Issue a warning here if the project share doesn't exist
 if not mount.exists():
@@ -11,16 +11,16 @@ if not mount.exists():
     )
 
 # Part of the share dedicated to the object detection subproject
-root = mount / 'Mehak' / 'git_wsl'
+root = 'workspace'
 
 # Location of available datasets
-wsl_data_dir = root / 'data'
+wsl_data_dir = mount
 
 # Location of csvs
 wsl_csv_dir = root / 'wsl' / 'wsl' / 'csvs'
 
 # Location of model dir where checkpoints are stored
-wsl_model_dir = root / 'models'
+wsl_model_dir = '/mnt/out' / 'models'
 
 # Location of model dir where checkpoints are stored
-wsl_summary_dir = root / 'summary'
+wsl_summary_dir = '/mnt/out' / 'summary'
