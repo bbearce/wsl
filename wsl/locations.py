@@ -20,7 +20,7 @@ wsl_data_dir = mount
 wsl_csv_dir = root / 'wsl' / 'wsl' / 'csvs'
 
 # Location of model dir where checkpoints are stored
-wsl_model_dir = '/mnt/out' / 'models'
+wsl_model_dir = Path('/mnt/out') / 'models'
 
 # Location of model dir where checkpoints are stored
-wsl_summary_dir = '/mnt/out' / 'summary'
+wsl_summary_dir = Path('/mnt/out') / 'summary'
