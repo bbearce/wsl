@@ -11,7 +11,7 @@ if not mount.exists():
     )
 
 # Part of the share dedicated to the object detection subproject
-root = Path('/workspace')
+root = Path('/inference')
 
 # Location of available datasets
 wsl_data_dir = mount
